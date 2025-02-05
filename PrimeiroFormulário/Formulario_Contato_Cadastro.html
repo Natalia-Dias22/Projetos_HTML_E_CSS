@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario_Cadastro</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="Formulario_Contato_Cadastro.css">
+</head>
+<body>
+    <form action="" class="form">
+        <fieldset class="fieldset">
+            <legend class="legend container">Cadastre-se</legend> 
+            
+            <label for="usuario" class="label container">Usuário</label>
+            <input type="text" name="usuario" id="usuario" required class="input">
+
+            <label for="email" class="label container">Email</label>
+            <input type="email" name="email" id="email" required class="input container"> 
+
+            <label for="senha" class="label container">Senha</label>
+            <input type="password" name="senha" id="senha" required class="input container"> <!-- Adicionado required aqui -->
+
+            <div class="button_login">
+                <button type="submit">CADASTRE-SE</button> 
+                <div class="acesso_extra">
+                    <p>Já possui cadastro?</p>
+                    <a href="Formulario_Contato_Login.html">Faça login</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

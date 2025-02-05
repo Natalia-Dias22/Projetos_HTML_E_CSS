@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Components</title>
+
+    <style>
+         :root {
+            --primary_color: #d57ac7;
+            --second-color: #31333B;
+        }
+        
+        html {
+            font-size: 62.5%;
+            /*Sempre busca da raiz*/
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            display: flex;
+            margin: 0;
+            padding: none;
+            color: #e7e7e7;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        article {
+            padding: 1em 0;
+        }
+        
+        .main_header {
+            flex: 0 0 26rem;
+            /*Quer que sua main ocupe todo o espaço, porém não aumente ou diminua conforme mude os espaçamentos*/
+            background-color: var(--second-color);
+            align-items: center;
+            justify-content: right;
+            text-align: right;
+            padding: 15px;
+        }
+        
+        .main {
+            background-color: #595c68;
+            flex: 1;
+            padding: 35px;
+        }
+        
+        .main h1 {
+            font-size: 3rem;
+            color: #e7e7e7;
+            margin-bottom: 50px;
+        }
+        
+        .article {
+            font-size: 1.2rem;
+            color: var(--primary_color);
+            padding-top: 1em;
+        }
+        
+        .article p {
+            margin-top: 25px;
+            color: #e7e7e7;
+            margin-bottom: 35px;
+        }
+        
+        h3,
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary_color);
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        
+        h4 {
+            font-size: 1.2rem;
+            color: var(--primary_color);
+        }
+        
+        a {
+            color: inherit;
+        }
+        
+        p {
+            font-size: 1.2rem;
+        }
+        
+        .main .main_header {
+            font-size: 1.6rem;
+        }
+        
+        .perfil_img {
+            max-width: 10rem;
+            margin-top: 25px;
+        }
+        
+        .navegador_lista {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .navegador_lista li a {
+            text-decoration: none;
+        }
+        
+        .navegador {
+            font-size: 1.3rem;
+        }
+        
+        .navegador_lista li {
+            border-bottom: 2px solid #444856;
+            margin-bottom: 10px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .navegador_lista li:hover {
+            background-color: rgba(0, 0, 0, .2);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+        
+        .destaque {
+            border-left: 2px solid var(--primary_color);
+            margin-bottom: 2.2em;
+            padding-left: 2em;
+        }
+        
+        .card {
+            max-width: 740px;
+            background-color: var(--second-color);
+            padding: 0;
+        }
+        
+        .card_content p,
+        .card_title {
+            margin: 0;
+        }
+        
+        .card_content {
+            padding: 0.5em 1em 1em;
+        }
+        
+        .card_title {
+            font-size: 1.5em;
+            margin-bottom: .25em;
+        }
+        
+        .card img {
+            max-width: 100%;
+            /*imagem vai se adequar ao tamanho da largura*/
+        }
+        
+        .row {
+            display: flex;
+            gap: 1.5em;
+            padding-top: 1.5rem;
+            justify-content: space-between;
+        }
+        /*Eu vou pegar a classe row e determinar que qualquer filho mais proximo tenha apenas espaçamento necessário*/
+        
+        .row>* {
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 0%;
+        }
+        
+        .alternates {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .alternates li {
+            border-bottom: 2px solid;
+            padding-bottom: .5em;
+            padding-top: .5em;
+        }
+        
+        .roman {
+            list-style-type: upper-roman;
+        }
+        
+        .list_emoji {
+            list-style-type: "\1F602";
+        }
+        
+        input,
+        label,
+        textarea,
+        select {
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        input[type="checkbox"],
+        input[type="radio"] {
+            width: auto;
+        }
+        
+        label {
+            font-size: 1.2rem;
+            margin-bottom: 1em;
+        }
+        
+        input,
+        select {
+            background-color: white;
+            padding: 1.2rem;
+            border-radius: 5px;
+            border: 0;
+            margin-bottom: 1.6rem;
+        }
+        
+        .btn {
+            background-color: rgb(90, 97, 100);
+            border: 2px solid rgb(78, 77, 77);
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: white;
+        }
+        
+        .btn:hover,
+        .btn:focus {
+            background-color: #444856;
+        }
+        
+        .form_quiz {
+            width: 50%;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+    <header class="main_header">
+        <div class="image_home">
+            <img src="Imagens_Projeto/ProjetoMyComponents-inicio/imagens/perfil.png" alt="Foto_Perfil" class="perfil_img">
+        </div>
+
+        <nav class="navegador">
+            <ul class="navegador_lista">
+                <li><a href="MyComponentes.html">Home</a></li>
+                <li><a href="tipografia.html">Tipografia</a></li>
+                <li><a href="Cards_projeto.html">Card</a></li>
+                <li><a href="Listas.html">Listas</a></li>
+                <li><a href="Bottom.html">Botões</a></li>
+                <li><a href="Formulario.html">Formulário</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <h1>My Component</h1>
+
+
+        <section class="section_form">
+            <h2>Entre em contato</h2>
+            <div class="row">
+
+                <form action="">
+                    <div class="row">
+                        <div>
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" placeholder="Nome completo">
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <label for="mensagem">Digite sua mensagem</label>
+                    <textarea name="mensagem" id="mensagem" rows="6"></textarea>
+                    <input type="submit" value="Enviar" Enviar class="btn">
+                </form>
+
+                <address>
+                   <p>Endereço 1234 Sei la RS, Sla, TN 0000 Brazil</p>
+                   <p>Telefone (00) 0 0000-0000 1234</p>
+                   <p>Email abcdc3_FGHJ@gmail.com</p>
+                </address>
+            </div>
+        </section>
+
+        <section>
+            <h2>Quiz</h2>
+            <form action="" class="form_quiz">
+
+                <label for="tecnologia">Qual a sua linguagem preferida?</label>
+                <select>
+                    <option value="null">Selecione</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">Java Script</option>
+                </select>
+
+
+                <label for="">Baixa prioridade <input type="radio" name="prioridade" value="baixa"></label>
+                <label for="">Média prioridade <input type="radio" name="prioridade" value="media"></label>
+                <label for="">Alta prioridade <input type="radio" name="prioridade" value="alta"></label>
+
+                <label for=""><input type="checkbox" name="copy" value="true"> Envie uma cópia</label>
+                <label for=""><input type="checkbox" name="copy" value="true"> Sou humano</label>
+
+                <div class="row">
+                    <input type="reset" value="limpar">
+                    <input type="submit" name="Enviar" class="btn">
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+
+</body>
+
+</html>

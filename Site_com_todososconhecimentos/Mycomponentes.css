@@ -1,0 +1,99 @@
+:root {
+    --primary_color: #d57ac7;
+    --second-color: #31333B;
+}
+
+html {
+    font-size: 62.5%;
+    /*Sempre busca da raiz*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: none;
+    color: #e7e7e7;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.main_header {
+    flex: 0 0 26rem;
+    /*Quer que sua main ocupe todo o espaço, porém não aumente ou diminua conforme mude os espaçamentos*/
+    background-color: var(--second-color);
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+    padding: 15px;
+}
+
+.main {
+    background-image: url(Imagens_Projeto/ProjetoMyComponents-inicio/imagens/bg-unsplash.png);
+    opacity: 1;
+    flex: 1;
+    padding: 35px;
+    padding: 6.5rem 6 rem 100vh;
+}
+
+.main h1 {
+    font-size: 3rem;
+    color: #e7e7e7;
+    margin-bottom: 50px;
+}
+
+.article {
+    font-size: 1.2rem;
+    color: var(--primary_color);
+}
+
+.article p {
+    margin-top: 25px;
+    color: #e7e7e7;
+    margin-bottom: 35px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: var(--primary_color);
+}
+
+a {
+    color: inherit;
+}
+
+.main .main_header {
+    font-size: 1.6rem;
+}
+
+.perfil_img {
+    max-width: 10rem;
+    margin-top: 25px;
+}
+
+.navegador_lista {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.navegador_lista li a {
+    text-decoration: none;
+}
+
+.navegador {
+    font-size: 1.3rem;
+}
+
+.navegador_lista li {
+    border-bottom: 2px solid #444856;
+    margin-bottom: 10px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.navegador_lista li:hover {
+    background-color: rgba(0, 0, 0, .2);
+    cursor: pointer;
+    transform: scale(1.1);
+}

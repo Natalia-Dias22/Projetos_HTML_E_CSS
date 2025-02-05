@@ -1,0 +1,93 @@
+html{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #3a68b7;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.form{
+    width: 90%;
+    min-width: 28.125em;
+    max-width: 35em;
+    background-color: #f2ffff;
+    padding: 1.5em;
+    border-radius: 3px;
+    box-shadow: -7px 0 0px rgba(0, 0, 0, .4);
+    
+}
+
+.fieldset{
+    border:none;
+    padding: 0;
+    margin: 0;
+   
+}
+
+.container{
+    
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    color: #3a68b7;
+   
+    
+}
+
+.legend{
+    margin-bottom: .9em;
+    font-size: 2em;
+}
+
+.label{
+    margin-bottom: 1.2em;
+    font-size: 1em;
+    color: rgba(0, 0, 0, .7);
+}
+
+.input {
+    border: none; 
+    border-bottom: 2px solid #3a68b7; /* Define a borda inferior */
+    margin-bottom: 1em;
+    padding: .7em;
+    box-sizing: border-box;
+    width: 100%; 
+    outline: none;
+    transition: border-bottom-color 0.3s ease, transform 0.3s ease; 
+
+}
+
+.input:focus {
+    border:2px solid #3a68b7; 
+    border-radius: 2px;
+    padding: .5em;
+    transform: translateX(-5px); /* Move a borda para a esquerda */
+}
+
+.button_login{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2em;
+}
+
+
+button{
+    background-color: #3a68b7;
+    color: white;
+    cursor: pointer;
+    padding: .9em;
+    border: none;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.acesso_extra{
+    display: flex;
+    gap: 0.5em;
+}

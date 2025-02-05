@@ -1,0 +1,174 @@
+:root {
+    --primary-color: #FED001;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+p,
+a {
+    font-size: 1.6rem;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    padding: 1.2rem 2.6rem;
+}
+
+.wrapperContainer-dark {
+    background-color: #2A2A2A;
+}
+
+.wrapperContainer-hero {
+    background-color: #fafafa;
+}
+
+.wrapperContainer-dark2 {
+    background-color: #003464;
+    color: #FAFAfA;
+    width: auto;
+}
+
+footer {
+    background-color: #003464;
+}
+
+.container {
+    max-width: 1276px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 2rem 0;
+}
+
+.header_nav {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    margin-top: 12px;
+}
+
+.header_nav a {
+    padding: 0.75em 1.15rem;
+    border: solid 1px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.header_nav a:hover {
+    background-color: black;
+}
+
+.wrapperContainer-hero {
+    background-image: linear-gradient(transparent, yellow);
+}
+
+.heroBanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.heroBanner h1 {
+    font-size: 4.2rem;
+    margin-bottom: 28px;
+}
+
+.section_cursos {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1.8rem;
+    text-align: center;
+}
+
+.section_cursos h1 {
+    margin-bottom: 1.9rem;
+    font-size: 36px;
+}
+
+.main_cursos {
+    justify-content: center;
+    align-items: center;
+}
+
+.div_cursos {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 5.5rem;
+}
+
+.article_imagens {
+    background-color: #ede6e6;
+    border-radius: .5rem;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, .2);
+    padding: 1.2rem;
+}
+
+.article_escrita {
+    margin-top: 1.4rem;
+    text-align: left;
+}
+
+.article_escrita h2 {
+    margin-bottom: 1.4rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    border-bottom: #FAFAfA;
+}
+
+.section_escola_explicacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: row;
+}
+
+.section_escola_escrita {
+    justify-content: center;
+    align-items: center;
+}
+
+.section_escola_escrita h1 {
+    margin-bottom: 1.9rem;
+    font-size: 36px;
+}
+
+.Contatos {
+    margin-top: 1.9rem;
+    margin-bottom: 1.9rem;
+    font-size: 36px;
+    text-align: center;
+}
+
+.aside {
+    margin-top: 1.9rem;
+    margin-bottom: 1.9rem;
+    font-size: 20px;
+    text-align: left;
+    display: flex;
+    gap: 15px;
+}
+
+footer {
+    background-color: #FED001;
+    padding: 1em;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}

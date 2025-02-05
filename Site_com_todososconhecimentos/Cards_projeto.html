@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cards</title>
+
+    <style>
+         :root {
+            --primary_color: #d57ac7;
+            --second-color: #31333B;
+        }
+        
+        html {
+            font-size: 62.5%;
+            /*Sempre busca da raiz*/
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            display: flex;
+            margin: 0;
+            padding: none;
+            color: #e7e7e7;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        article {
+            padding: 1em 0;
+        }
+        
+        .main_header {
+            flex: 0 0 26rem;
+            /*Quer que sua main ocupe todo o espaço, porém não aumente ou diminua conforme mude os espaçamentos*/
+            background-color: var(--second-color);
+            align-items: center;
+            justify-content: right;
+            text-align: right;
+            padding: 15px;
+        }
+        
+        .main {
+            background-color: #595c68;
+            flex: 1;
+            padding: 35px;
+        }
+        
+        .main h1 {
+            font-size: 3rem;
+            color: #e7e7e7;
+            margin-bottom: 50px;
+        }
+        
+        .article {
+            font-size: 1.2rem;
+            color: var(--primary_color);
+            padding-top: 1em;
+        }
+        
+        .article p {
+            margin-top: 25px;
+            color: #e7e7e7;
+            margin-bottom: 35px;
+        }
+        
+        h3,
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary_color);
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        
+        h4 {
+            font-size: 1.2rem;
+            color: var(--primary_color);
+        }
+        
+        a {
+            color: inherit;
+        }
+        
+        p {
+            font-size: 1.2rem;
+        }
+        
+        .main .main_header {
+            font-size: 1.6rem;
+        }
+        
+        .perfil_img {
+            max-width: 10rem;
+            margin-top: 25px;
+        }
+        
+        .navegador_lista {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .navegador_lista li a {
+            text-decoration: none;
+        }
+        
+        .navegador {
+            font-size: 1.3rem;
+        }
+        
+        .navegador_lista li {
+            border-bottom: 2px solid #444856;
+            margin-bottom: 10px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .navegador_lista li:hover {
+            background-color: rgba(0, 0, 0, .2);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+        
+        .destaque {
+            border-left: 2px solid var(--primary_color);
+            margin-bottom: 2.2em;
+            padding-left: 2em;
+        }
+        
+        .card {
+            max-width: 740px;
+            background-color: var(--second-color);
+            padding: 0;
+        }
+        
+        .card_content p,
+        .card_title {
+            margin: 0;
+        }
+        
+        .card_content {
+            padding: 0.5em 1em 1em;
+        }
+        
+        .card_title {
+            font-size: 1.5em;
+            margin-bottom: .25em;
+        }
+        
+        .card img {
+            max-width: 100%;
+            /*imagem vai se adequar ao tamanho da largura*/
+        }
+        
+        .row {
+            display: flex;
+            gap: 1.5em;
+            padding-top: 1.5rem;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+    <header class="main_header">
+        <div class="image_home">
+            <img src="Imagens_Projeto/ProjetoMyComponents-inicio/imagens/perfil.png" alt="Foto_Perfil" class="perfil_img">
+        </div>
+
+        <nav class="navegador">
+            <ul class="navegador_lista">
+                <li><a href="MyComponentes.html">Home</a></li>
+                <li><a href="tipografia.html">Tipografia</a></li>
+                <li><a href="Cards_projeto.html">Card</a></li>
+                <li><a href="Listas.html">Listas</a></li>
+                <li><a href="#">Botões</a></li>
+                <li><a href="Formulario.html">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="main">
+        <h1>My Component</h1>
+
+        <article class="destaque">
+            <h2>Cards</h2>
+            <p>Cards são elementos usados para agrupar informações como imagens (opcional), título e descrição. Normalmente são links para outras páginas dentro da mesma aplicação</p>
+        </article>
+
+
+        <h3>1 Card</h3>
+        <div class="card">
+            <img src="Imagens_Projeto/ProjetoMyComponents-inicio/imagens/fulls/01.jpg" alt="CARD1">
+            <div class="card_content">
+                <h3 card_title>Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptate? Adipisci vel omnis esse suscipit.</p>
+            </div>
+        </div>
+
+
+
+        <section>
+            <h3>2 Cards</h3>
+            <div class="row">
+                <div class="card">
+                    <img src="Imagens_Projeto/ProjetoMyComponents-inicio/imagens/fulls/01.jpg" alt="CARD1">
+                    <div class="card_content">
+                        <h3 card_title>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptate? Adipisci vel omnis esse suscipit.</p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="Imagens_Projeto/ProjetoMyComponents-inicio/imagens/fulls/01.jpg" alt="CARD1">
+                    <div class="card_content">
+                        <h3 card_title>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptate? Adipisci vel omnis esse suscipit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section>
+            <h3>3 Cards</h3>
+            <div class="row">
+                <div class="card">
+                    <img src="Imagens_Projeto/ProjetoMyComponents-inicio/imagens/fulls/01.jpg" alt="CARD1">
+                    <div class="card_content">
+                        <h3 card_title>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptate? Adipisci vel omnis esse suscipit.</p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="Imagens_Projeto/ProjetoMyComponents-inicio/imagens/fulls/01.jpg" alt="CARD1">
+                    <div class="card_content">
+                        <h3 card_title>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptate? Adipisci vel omnis esse suscipit.</p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="Imagens_Projeto/ProjetoMyComponents-inicio/imagens/fulls/01.jpg" alt="CARD1">
+                    <div class="card_content">
+                        <h3 card_title>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptate? Adipisci vel omnis esse suscipit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <h3>4 Cards</h3>
+            <div class="row">
+                <div class="card">
+                    <img src="Imagens_Projeto/ProjetoMyComponents-inicio/imagens/fulls/01.jpg" alt="CARD1">
+                    <div class="card_content">
+                        <h3 card_title>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptate? Adipisci vel omnis esse suscipit.</p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="Imagens_Projeto/ProjetoMyComponents-inicio/imagens/fulls/01.jpg" alt="CARD1">
+                    <div class="card_content">
+                        <h3 card_title>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptate? Adipisci vel omnis esse suscipit.</p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="Imagens_Projeto/ProjetoMyComponents-inicio/imagens/fulls/01.jpg" alt="CARD1">
+                    <div class="card_content">
+                        <h3 card_title>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptate? Adipisci vel omnis esse suscipit.</p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="Imagens_Projeto/ProjetoMyComponents-inicio/imagens/fulls/01.jpg" alt="CARD1">
+                    <div class="card_content">
+                        <h3 card_title>Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptate? Adipisci vel omnis esse suscipit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+</body>
+
+
+</html>

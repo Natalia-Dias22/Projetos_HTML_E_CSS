@@ -1,0 +1,99 @@
+html,
+body {
+    height: 700px;
+}
+
+body {
+    background-image: url(ImagensPlano/ImagensEscolhaSeuPlano/ProjetoCSS-flexbox-desafio/imagens/bg-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    /*Elmento ocupa a largura total do container e começa em uma nova linha*/
+}
+
+h1 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.gallery {
+    width: 80rem;
+    display: flex;
+    flex-wrap: wrap;
+    /*Permite quebra de linha*/
+    justify-content: center;
+    gap: .5em;
+    background-color: white;
+    padding: .5em;
+    box-shadow: 0 0 14px 2px rgba(0, 0, 0, .5);
+}
+
+.gallery .image {
+    flex-basis: calc(25% - .5em);
+    position: relative;
+    /*Mantém o elemento no fluxo, mas permite movê-lo em relação à sua posição original.*/
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.gallery p {
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    text-transform: uppercase;
+    padding: 1em;
+    font-size: .75em;
+    position: absolute;
+    /*Retira o elemento do fluxo normal, posicionado em relação ao ancestraL, seu pai*/
+    bottom: 0;
+    margin-bottom: 0;
+    width: 295px;
+    opacity: 0;
+    align-items: stretch;
+    transform: translateY(100%);
+    transition: all .3s ease;
+}
+
+.image:hover p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.image img {
+    transform: scale(1);
+    transition: transform .5s ease-in-out;
+}
+
+.image:hover img {
+    transform: scale(1.2);
+}
+
+.image::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    opacity: .5;
+    pointer-events: none;
+    inset: 0;
+    transform: scale(1);
+    transition: all .2s ease-in-out;
+}
+
+
+/*Um precisa estar interligado no outro, se eu coloquei background no after e quero que saia, preciso colocar hover no after.*/
+
+.image:hover::after {
+    opacity: 0;
+}
